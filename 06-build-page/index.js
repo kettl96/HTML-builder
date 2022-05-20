@@ -47,7 +47,7 @@ const mergeStyle = () => {
             bundleArray.push(fileContent);
             fs.open(__dirname + '/project-dist/style.css', 'w', (err) => {
               if (err) throw err;
-              fs.writeFile(__dirname + '/project-dist/style.css', `${bundleArray.join('')}`, (err) => {
+              fs.writeFile(__dirname + '/project-dist/style.css', `${bundleArray.join('\n\n')}`, (err) => {
                 if (err) throw err;
               });
             });
